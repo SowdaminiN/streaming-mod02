@@ -1,3 +1,4 @@
+# Sowdamini Nandigama
 # streaming-02-multiple-processes
 
 > Multiple processes accessing a shared resource concurrently
@@ -12,9 +13,9 @@ hitting a shared database at the same time.
 ## Prerequisites
 
 1. Git
-1. Python 3.7+ (3.11+ preferred)
-1. VS Code Editor
-1. VS Code Extension: Python (by Microsoft)
+2. Python 3.7+ (3.11+ preferred)
+3. VS Code Editor
+4. VS Code Extension: Python (by Microsoft)
 
 ## Task 1. Fork 
 
@@ -39,14 +40,23 @@ Execute multiple_processes.py.
 Read the output. Read the code. 
 Try to figure out what's going on. 
 
-1. What libraries did we import?
+1. What libraries did we import? 
+We have loaded Pyhton Standard Libraries - datetime, logging, multiprocessing, os, platform, sqlite3, sys, time
 1. Where do we set the TASK_DURATION_SECONDS?
+We set as the variable TASK_DURATION_SECONDS value before starting the process.
 1. How many functions are defined? 
+A total of 7 functions defined that includes all the create, delete, join etc
 1. What are the function names? 
+recreate_database, create_table, drop_table, insert_pet, process_one, process_two, process_three
 1. In general, what does each function do? 
+creates the database, creates the table, drops the table, insert the pet records in to table, process tries to insert 2 records with the sleep.
 1. Where does the execution begin? Hint: generally at the end of the file.
+Function multiprocessing.process() is called from the main function
 1. How many processes do we start?
+3 - One after the other
 1. How many records does each process insert?
+2
+
 
 In this first run, we start 3 processes, 
 each inserting 2 records into a shared database 
